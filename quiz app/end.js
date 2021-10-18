@@ -6,7 +6,7 @@ if(localStorage.getItem("score") < 10){
 }else{
     congrat.textContent = "الله يباركلك يبني"
 }
-h4.textContent = `النتيجة ${localStorage.getItem("score")} من 20`
+h4.textContent = `النتيجة ${localStorage.getItem("score")} من 21`
 btn.onclick = function(e){
     location.assign("./start.html")
 }
