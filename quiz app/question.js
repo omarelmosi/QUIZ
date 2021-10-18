@@ -178,7 +178,7 @@ let ad = [
   {
     question: "ظهور الصفات الوراثية تتم حسب الترتيب",
     choice1: "DNA-بروتين-RNA",
-    choice2: "DNA-RNA-بروتين",
+    choice2: "بروتين-DNA-RNA",
     choice3: "بروتين-RNA-DNA",
     choice4: "RNA-بروتين-DNA",
     correct: "2",
@@ -192,7 +192,7 @@ let choice = "";
 let sel = document.getElementById("les");
 let headNmae = document.getElementById("name");
 let score = 0;
-let currentQuestion = 0;
+let currentQuestion = 0
 let confirmBtn = document.getElementById("confirm");
 let nextBtn = document.getElementById("next");
 let alertS = document.querySelector(".alert");
