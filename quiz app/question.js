@@ -218,7 +218,7 @@ confirmBtn.addEventListener("click", function (e) {
       answer = e.getAttribute("data-number");
     }
   });
-  if (all[currentQuestion].correct === answer) {
+  if (all[currentQuestion - 1].correct === answer) {
     alertS.classList.add("suc");
     alertS.textContent = "صح يا إبني ربنا يحميك";
     score += 2;
