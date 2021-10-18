@@ -1,0 +1,111 @@
+.start {
+    all: unset;
+    width: 100px;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(40, 37, 80);
+    cursor: pointer;
+    transition: all 0.4s;
+    transform: translateX(-800%);
+}
+
+.show {
+    transform: translateX(0%);
+
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    direction: rtl;
+}
+
+#hero {
+    width: 300px;
+}
+
+.hero h2 {
+    color: black;
+}
+
+.inputs-con {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    direction: rtl;
+}
+
+.input-con {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-con select {
+    width: 130px;
+    font-weight: bold;
+}
+
+
+
+.hero h2 {
+    border-left: solid 3px rgba(0, 0, 0, 0.75);
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 28px;
+    color: black;
+}
+
+/* Animation */
+.hero h2 {
+    animation: animated-text 4s steps(31) 1s 1 normal both,
+        animated-cursor 600ms steps(31) infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 389px;
+    }
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor {
+    from {
+        border-left-color: rgba(0, 0, 0, 0.75);
+    }
+
+    to {
+        border-left-color: transparent;
+    }
+}
+
+.btn-con {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.input-con input,
+.input-con select {
+    padding: 3px;
+    outline: none;
+    padding-right: 5px;
+    border-radius: 5px;
+    border: solid 1px;
+}
+
+.input-con option {
+    font-size: 16px;
+    font-weight: bold;
+}
