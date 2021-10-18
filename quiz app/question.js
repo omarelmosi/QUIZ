@@ -192,7 +192,7 @@ let choice = "";
 let sel = document.getElementById("les");
 let headNmae = document.getElementById("name");
 let score = 0;
-let currentQuestion = 1;
+let currentQuestion = 0;
 let confirmBtn = document.getElementById("confirm");
 let nextBtn = document.getElementById("next");
 let alertS = document.querySelector(".alert");
@@ -218,7 +218,7 @@ confirmBtn.addEventListener("click", function (e) {
       answer = e.getAttribute("data-number");
     }
   });
-  if (all[currentQuestion - 1].correct === answer) {
+  if (all[currentQuestion].correct === answer) {
     alertS.classList.add("suc");
     alertS.textContent = "صح يا إبني ربنا يحميك";
     score += 2;
@@ -235,7 +235,7 @@ nextBtn.addEventListener("click", function (e) {
   nextBtn.style.display = "none";
   alertS.className = "alert";
   scoreText.textContent = `عدد النقاط:${score}`;
-  qNumber.textContent = `السؤال رقم:${currentQuestion}`;
+  qNumber.textContent = `السؤال رقم:${currentQuestion+1}`;
   localStorage.setItem("score", score);
   if (all.length <= currentQuestion) {
     location.assign("./end.html");
@@ -243,6 +243,5 @@ nextBtn.addEventListener("click", function (e) {
     getNewQn();
   }
 });
-console.log(localStorage.getItem("score"));
 
 getNewQn();
